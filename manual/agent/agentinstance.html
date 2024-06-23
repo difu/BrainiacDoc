@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AgentInstance &#8212; Brainiac  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Body" href="../body/index.html" />
+    <link rel="prev" title="Agent" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="agentinstance">
+<h1>AgentInstance<a class="headerlink" href="#agentinstance" title="Link to this heading">¶</a></h1>
+<p>The <cite>AgentInstance</cite> represents an instance of an agent in the simulation.
+It is a child of <cite>Agent</cite> and contains the state of the individual agent in the simulation.
+The state of an instance is the information that is needed to simulate the instance in the environment.</p>
+<p>Each AgentInstance has a reference to the Agent that it is an instance of.
+The AgentInstance is responsible for updating its state based on the environment and the other instances in the simulation.</p>
+<p>The input channels can be used to update the state of the AgentInstance by its Brain.</p>
+<p>Examples of the state of an AgentInstance are:</p>
+<ul class="simple">
+<li><p><strong>Position</strong>: The position of the agent in the simulation space.</p></li>
+<li><p><strong>Velocity</strong>: The velocity of the agent.</p></li>
+<li><p><strong>Orientation</strong>: The orientation of the agent.</p></li>
+</ul>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413AgentInstance">
+<span id="_CPPv313AgentInstance"></span><span id="_CPPv213AgentInstance"></span><span id="AgentInstance"></span><span class="target" id="classAgentInstance"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AgentInstance</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv413AgentInstance" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;agentinstance.h&gt;</em></div>
+<p>The <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> class represents an instance of an Agent. </p>
+<p>An <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> is created by the Locator and is used to hold information about the specific instance of an Agent in the simulation. It contains the agent’s input and output channels, as well as information about its position in 3D space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class inherits from QObject to enable the use of signals and slots. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance13AgentInstanceEP7LocatorP5Agent">
+<span id="_CPPv3N13AgentInstance13AgentInstanceEP7LocatorP5Agent"></span><span id="_CPPv2N13AgentInstance13AgentInstanceEP7LocatorP5Agent"></span><span id="AgentInstance::AgentInstance__LocatorP.AgentP"></span><span class="target" id="classAgentInstance_1a8baf1a4dc632d4c55dc1b97e8ab5956a"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AgentInstance</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Locator</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">locator</span></span>, <span class="n"><span class="pre">Agent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance13AgentInstanceEP7LocatorP5Agent" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance15addInputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE">
+<span id="_CPPv3N13AgentInstance15addInputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE"></span><span id="_CPPv2N13AgentInstance15addInputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE"></span><span id="AgentInstance::addInputChannel__BrainiacGlobals::BrainiacId.Channel::ChannelDefaultsP"></span><span class="target" id="classAgentInstance_1a9ceb6b3362f1314c280313a7eb931b46"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addInputChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ChannelDefaults</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">defaults</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance15addInputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance16addOutputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE">
+<span id="_CPPv3N13AgentInstance16addOutputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE"></span><span id="_CPPv2N13AgentInstance16addOutputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE"></span><span id="AgentInstance::addOutputChannel__BrainiacGlobals::BrainiacId.Channel::ChannelDefaultsP"></span><span class="target" id="classAgentInstance_1a662024f22ce5575b9800df1a44a7a0e0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addOutputChannel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ChannelDefaults</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">defaults</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance16addOutputChannelEN15BrainiacGlobals10BrainiacIdEPN7Channel15ChannelDefaultsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance7advanceEv">
+<span id="_CPPv3N13AgentInstance7advanceEv"></span><span id="_CPPv2N13AgentInstance7advanceEv"></span><span id="AgentInstance::advance"></span><span class="target" id="classAgentInstance_1a965ac86f6ae5ae40881dca544b6429fa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">advance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance7advanceEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Advance the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a>. </p>
+<p>This method is called to advance the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> in the simulation. It updates the rotation and translation of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> based on the values of the output channels. The new rotation and translation values are calculated using the current rotation, translation, and output channel values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method assumes that the Quick3d node is ready. If the Quick3d node is null, these methods will not have any effect. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance13advanceCommitEv">
+<span id="_CPPv3N13AgentInstance13advanceCommitEv"></span><span id="_CPPv2N13AgentInstance13advanceCommitEv"></span><span id="AgentInstance::advanceCommit"></span><span class="target" id="classAgentInstance_1ab6dbd052eb40b06cb6440d9f0c6e515f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">advanceCommit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance13advanceCommitEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Commit the changes made during the advance step. </p>
+<p>This method is called at the end of the advance step to commit the changes made to the agent’s rotation and translation. The new rotation and translation values are set using the setRotation() and setTranslation() methods, respectively. After committing the changes, the agent’s instance brain is invalidated using the invalidateAll() method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method assumes that the Quick3d node is ready. If the Quick3d node is null, these methods will not have any effect. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance5resetEv">
+<span id="_CPPv3N13AgentInstance5resetEv"></span><span id="_CPPv2N13AgentInstance5resetEv"></span><span id="AgentInstance::reset"></span><span class="target" id="classAgentInstance_1af19c7569d653ce775339c2a783857e58"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance5resetEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance5agentEv">
+<span id="_CPPv3NK13AgentInstance5agentEv"></span><span id="_CPPv2NK13AgentInstance5agentEv"></span><span id="AgentInstance::agentC"></span><span class="target" id="classAgentInstance_1a8c64967fbc7635cbce1c5600dbc9347f"></span><span class="n"><span class="pre">Agent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">agent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance5agentEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance13inputChannelsEv">
+<span id="_CPPv3NK13AgentInstance13inputChannelsEv"></span><span id="_CPPv2NK13AgentInstance13inputChannelsEv"></span><span id="AgentInstance::inputChannelsC"></span><span class="target" id="classAgentInstance_1a53812672b6111b68d94718433e194e50"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inputChannels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance13inputChannelsEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance14outputChannelsEv">
+<span id="_CPPv3NK13AgentInstance14outputChannelsEv"></span><span id="_CPPv2NK13AgentInstance14outputChannelsEv"></span><span id="AgentInstance::outputChannelsC"></span><span class="target" id="classAgentInstance_1a1997e7806eb1aae7e21b38360fb30089"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">outputChannels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance14outputChannelsEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance19geometryQuick3DNodeEv">
+<span id="_CPPv3NK13AgentInstance19geometryQuick3DNodeEv"></span><span id="_CPPv2NK13AgentInstance19geometryQuick3DNodeEv"></span><span id="AgentInstance::geometryQuick3DNodeC"></span><span class="target" id="classAgentInstance_1a5e68dfdd60811f8efe1f3bef50191b42"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geometryQuick3DNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">AgentInstaceGeometryQuick3D</span></span><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance19geometryQuick3DNodeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the geometryQuick3DNode of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a>. </p>
+<p>This method returns the geometryQuick3DNode of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a>, which is an instance of the AgentInstaceGeometryQuick3D class. The geometryQuick3DNode represents the geometry of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> in a Quick3D scene. It is used to hold information about the position, rotation, and other properties of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> in 3D space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method does not create a new instance of AgentInstaceGeometryQuick3D. It simply returns the existing instance. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The geometryQuick3DNode of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance11instanceQMLEv">
+<span id="_CPPv3NK13AgentInstance11instanceQMLEv"></span><span id="_CPPv2NK13AgentInstance11instanceQMLEv"></span><span id="AgentInstance::instanceQMLC"></span><span class="target" id="classAgentInstance_1a19dd14381ea8266b14ae4750f9faed79"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instanceQML</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance11instanceQMLEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the QML code for the instance of the Agent. </p>
+<p>This method reads the QML code from the file “:gui/AgentInstance.qml” and returns it as a QString. The QML code represents the visual representation of the <a class="reference internal" href="#classAgentInstance"><span class="std std-ref">AgentInstance</span></a> in the 3D view.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the file cannot be opened, qFatal() is called to terminate the application. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The QML code for the instance of the Agent. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance22setGeometryQuick3DNodeEP27AgentInstaceGeometryQuick3D">
+<span id="_CPPv3N13AgentInstance22setGeometryQuick3DNodeEP27AgentInstaceGeometryQuick3D"></span><span id="_CPPv2N13AgentInstance22setGeometryQuick3DNodeEP27AgentInstaceGeometryQuick3D"></span><span id="AgentInstance::setGeometryQuick3DNode__AgentInstaceGeometryQuick3DP"></span><span class="target" id="classAgentInstance_1ac0b6ca8e79e04031434616f6daca46f1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGeometryQuick3DNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AgentInstaceGeometryQuick3D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">newGeometryQuick3DNode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance22setGeometryQuick3DNodeEP27AgentInstaceGeometryQuick3D" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance7locatorEv">
+<span id="_CPPv3NK13AgentInstance7locatorEv"></span><span id="_CPPv2NK13AgentInstance7locatorEv"></span><span id="AgentInstance::locatorC"></span><span class="target" id="classAgentInstance_1a3dc0bba5f96d380bd8119429d3d18f12"></span><span class="n"><span class="pre">Locator</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">locator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance7locatorEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance11translationEv">
+<span id="_CPPv3NK13AgentInstance11translationEv"></span><span id="_CPPv2NK13AgentInstance11translationEv"></span><span id="AgentInstance::translationC"></span><span class="target" id="classAgentInstance_1afc7c92d7133d93df6cda9ea5fe112c7c"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">translation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance11translationEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance14setTranslationERK9QVector3D">
+<span id="_CPPv3N13AgentInstance14setTranslationERK9QVector3D"></span><span id="_CPPv2N13AgentInstance14setTranslationERK9QVector3D"></span><span id="AgentInstance::setTranslation__QVector3DCR"></span><span class="target" id="classAgentInstance_1ab86fecef5a790da6978f3bccb76591e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTranslation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTranslation</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance14setTranslationERK9QVector3D" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance28setTranslationWithForcedEmitERK9QVector3D">
+<span id="_CPPv3N13AgentInstance28setTranslationWithForcedEmitERK9QVector3D"></span><span id="_CPPv2N13AgentInstance28setTranslationWithForcedEmitERK9QVector3D"></span><span id="AgentInstance::setTranslationWithForcedEmit__QVector3DCR"></span><span class="target" id="classAgentInstance_1a33867d982d8901cb53c6bb36af8499a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTranslationWithForcedEmit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTranslation</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance28setTranslationWithForcedEmitERK9QVector3D" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance8rotationEv">
+<span id="_CPPv3NK13AgentInstance8rotationEv"></span><span id="_CPPv2NK13AgentInstance8rotationEv"></span><span id="AgentInstance::rotationC"></span><span class="target" id="classAgentInstance_1aa0f66629e0857e36de98e29678355413"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rotation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance8rotationEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance11setRotationERK9QVector3D">
+<span id="_CPPv3N13AgentInstance11setRotationERK9QVector3D"></span><span id="_CPPv2N13AgentInstance11setRotationERK9QVector3D"></span><span id="AgentInstance::setRotation__QVector3DCR"></span><span class="target" id="classAgentInstance_1acd7f38e86fab4d6efe017b0bdb0651e7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRotation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newRotation</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance11setRotationERK9QVector3D" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance24setRotationithForcedEmitERK9QVector3D">
+<span id="_CPPv3N13AgentInstance24setRotationithForcedEmitERK9QVector3D"></span><span id="_CPPv2N13AgentInstance24setRotationithForcedEmitERK9QVector3D"></span><span id="AgentInstance::setRotationithForcedEmit__QVector3DCR"></span><span class="target" id="classAgentInstance_1a9898b381a9d1c5898e93a82c72b852af"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRotationithForcedEmit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newRotation</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance24setRotationithForcedEmitERK9QVector3D" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13AgentInstance13instanceBrainEv">
+<span id="_CPPv3NK13AgentInstance13instanceBrainEv"></span><span id="_CPPv2NK13AgentInstance13instanceBrainEv"></span><span id="AgentInstance::instanceBrainC"></span><span class="target" id="classAgentInstance_1a5d3b6355673276d66b026ac38b30ee3c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">AgentInstanceBrain</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instanceBrain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13AgentInstance13instanceBrainEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance26geometryQuick3DNodeChangedEv">
+<span id="_CPPv3N13AgentInstance26geometryQuick3DNodeChangedEv"></span><span id="_CPPv2N13AgentInstance26geometryQuick3DNodeChangedEv"></span><span id="AgentInstance::geometryQuick3DNodeChanged"></span><span class="target" id="classAgentInstance_1a988a3c1f9532100f171a865196ec4f34"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geometryQuick3DNodeChanged</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance26geometryQuick3DNodeChangedEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance18translationChangedEv">
+<span id="_CPPv3N13AgentInstance18translationChangedEv"></span><span id="_CPPv2N13AgentInstance18translationChangedEv"></span><span id="AgentInstance::translationChanged"></span><span class="target" id="classAgentInstance_1ac0ca78bbd529fb4cfa5d99947e5198ca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">translationChanged</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance18translationChangedEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance15rotationChangedEv">
+<span id="_CPPv3N13AgentInstance15rotationChangedEv"></span><span id="_CPPv2N13AgentInstance15rotationChangedEv"></span><span id="AgentInstance::rotationChanged"></span><span class="target" id="classAgentInstance_1a01c2a74265ffca19c44777322db16978"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rotationChanged</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13AgentInstance15rotationChangedEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp">
+<span class="target" id="classAgentInstance_1aa57c99a253eab221358851d4f19f0789"></span><span class="sig-name descname"><span class="pre">AgentInstaceGeometryQuick3D</span> <span class="pre">*</span> <span class="pre">geometryQuick3DNode</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp">
+<span class="target" id="classAgentInstance_1ac02e9ff5c6d206622f5918bf099d0e64"></span><span class="sig-name descname"><span class="pre">QVector3D</span> <span class="pre">translation</span></span></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance7m_agentE">
+<span id="_CPPv3N13AgentInstance7m_agentE"></span><span id="_CPPv2N13AgentInstance7m_agentE"></span><span id="AgentInstance::m_agent__AgentP"></span><span class="target" id="classAgentInstance_1ab4b48e08137a75051b9f0f599965764a"></span><span class="n"><span class="pre">Agent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_agent</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance7m_agentE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance15m_instanceBrainE">
+<span id="_CPPv3N13AgentInstance15m_instanceBrainE"></span><span id="_CPPv2N13AgentInstance15m_instanceBrainE"></span><span id="AgentInstance::m_instanceBrain__AgentInstanceBrainP"></span><span class="target" id="classAgentInstance_1a5bafd74b280bac557b986774a9900761"></span><span class="n"><span class="pre">AgentInstanceBrain</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_instanceBrain</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance15m_instanceBrainE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance21m_geometryQuick3DNodeE">
+<span id="_CPPv3N13AgentInstance21m_geometryQuick3DNodeE"></span><span id="_CPPv2N13AgentInstance21m_geometryQuick3DNodeE"></span><span id="AgentInstance::m_geometryQuick3DNode__AgentInstaceGeometryQuick3DP"></span><span class="target" id="classAgentInstance_1aa06bf7c42a30834f29d7d6d57d0052e3"></span><span class="n"><span class="pre">AgentInstaceGeometryQuick3D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_geometryQuick3DNode</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance21m_geometryQuick3DNodeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance9m_locatorE">
+<span id="_CPPv3N13AgentInstance9m_locatorE"></span><span id="_CPPv2N13AgentInstance9m_locatorE"></span><span id="AgentInstance::m_locator__LocatorP"></span><span class="target" id="classAgentInstance_1a391c0702be80213f7961794d2748cebc"></span><span class="n"><span class="pre">Locator</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_locator</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance9m_locatorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance13m_translationE">
+<span id="_CPPv3N13AgentInstance13m_translationE"></span><span id="_CPPv2N13AgentInstance13m_translationE"></span><span id="AgentInstance::m_translation__QVector3D"></span><span class="target" id="classAgentInstance_1afcf8fe11c8ce4f2cd20b033fe66c9d4c"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_translation</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance13m_translationE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance16m_newTranslationE">
+<span id="_CPPv3N13AgentInstance16m_newTranslationE"></span><span id="_CPPv2N13AgentInstance16m_newTranslationE"></span><span id="AgentInstance::m_newTranslation__QVector3D"></span><span class="target" id="classAgentInstance_1aa44d0d8aeabcc698fc6e30a378cc3ebe"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_newTranslation</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance16m_newTranslationE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance10m_rotationE">
+<span id="_CPPv3N13AgentInstance10m_rotationE"></span><span id="_CPPv2N13AgentInstance10m_rotationE"></span><span id="AgentInstance::m_rotation__QVector3D"></span><span class="target" id="classAgentInstance_1a7e85a9e6e39314bd6f3d495e503fe7ac"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_rotation</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance10m_rotationE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance13m_newRotationE">
+<span id="_CPPv3N13AgentInstance13m_newRotationE"></span><span id="_CPPv2N13AgentInstance13m_newRotationE"></span><span id="AgentInstance::m_newRotation__QVector3D"></span><span class="target" id="classAgentInstance_1a3ccc7d1e27d808437d15b54da010874f"></span><span class="n"><span class="pre">QVector3D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_newRotation</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance13m_newRotationE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance15m_inputChannelsE">
+<span id="_CPPv3N13AgentInstance15m_inputChannelsE"></span><span id="_CPPv2N13AgentInstance15m_inputChannelsE"></span><span id="AgentInstance::m_inputChannels__QHash:BrainiacGlobals::BrainiacId.ChannelP:"></span><span class="target" id="classAgentInstance_1a1d1d5e72ccf2ce68533e48f1eb7dfa51"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_inputChannels</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance15m_inputChannelsE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>List of all input channels of this agent. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13AgentInstance16m_outputChannelsE">
+<span id="_CPPv3N13AgentInstance16m_outputChannelsE"></span><span id="_CPPv2N13AgentInstance16m_outputChannelsE"></span><span id="AgentInstance::m_outputChannels__QHash:BrainiacGlobals::BrainiacId.ChannelP:"></span><span class="target" id="classAgentInstance_1a08643a39e9226f11bd914fcdc47a1d7f"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Channel</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_outputChannels</span></span></span><a class="headerlink" href="#_CPPv4N13AgentInstance16m_outputChannelsE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>List of all output channels of this agent. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Brainiac</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome to Brainiac’s documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Brainiac Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../body/index.html">Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brain/index.html">Brain</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Brainiac Manual</a><ul>
+  <li><a href="index.html">Agent</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Agent</a></li>
+      <li>Next: <a href="../body/index.html" title="next chapter">Body</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dirk Fuchs.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/manual/agent/agentinstance.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

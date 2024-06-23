@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Noise Node &#8212; Brainiac  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Output Node" href="output.html" />
+    <link rel="prev" title="Brain" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="noise-node">
+<h1>Noise Node<a class="headerlink" href="#noise-node" title="Link to this heading">¶</a></h1>
+<img alt="../../_images/editor_logo_noise.png" src="../../_images/editor_logo_noise.png" />
+<p>The noise node is a special kind of input node. It provides a pseudo-random value between 0 and 1. The rate is the
+frequency of the variation in Hz.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv45Noise">
+<span id="_CPPv35Noise"></span><span id="_CPPv25Noise"></span><span id="Noise"></span><span class="target" id="classNoise"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Noise</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">FuzzyBase</span></span><a class="headerlink" href="#_CPPv45Noise" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;noise.h&gt;</em></div>
+<p>The <a class="reference internal" href="#classNoise"><span class="std std-ref">Noise</span></a> class. </p>
+<p>The parent is the <a class="reference internal" href="index.html#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Noise5NoiseEP7QObjectN15BrainiacGlobals10BrainiacIdE">
+<span id="_CPPv3N5Noise5NoiseEP7QObjectN15BrainiacGlobals10BrainiacIdE"></span><span id="_CPPv2N5Noise5NoiseEP7QObjectN15BrainiacGlobals10BrainiacIdE"></span><span id="Noise::Noise__QObjectP.BrainiacGlobals::BrainiacId"></span><span class="target" id="classNoise_1a7d80bd47aedbeb05e9cc09116e3a76f7"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Noise5NoiseEP7QObjectN15BrainiacGlobals10BrainiacIdE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Noise8fromJsonE11QJsonObject">
+<span id="_CPPv3N5Noise8fromJsonE11QJsonObject"></span><span id="_CPPv2N5Noise8fromJsonE11QJsonObject"></span><span id="Noise::fromJson__QJsonObject"></span><span class="target" id="classNoise_1a5ef68481e87258fdffbd8f289fde9fc9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromJson</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QJsonObject</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Noise8fromJsonE11QJsonObject" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Noise6toJsonEv">
+<span id="_CPPv3NK5Noise6toJsonEv"></span><span id="_CPPv2NK5Noise6toJsonEv"></span><span id="Noise::toJsonC"></span><span class="target" id="classNoise_1a05c094386b3dd4000e898f6e1d6f6419"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QJsonObject</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toJson</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Noise6toJsonEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Noise4rateEv">
+<span id="_CPPv3NK5Noise4rateEv"></span><span id="_CPPv2NK5Noise4rateEv"></span><span id="Noise::rateC"></span><span class="target" id="classNoise_1a83843fca6049435fbede5258a41da05e"></span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Noise4rateEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>returns the rate of this noise node </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the rate in Hz </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Noise7setRateE5qreal">
+<span id="_CPPv3N5Noise7setRateE5qreal"></span><span id="_CPPv2N5Noise7setRateE5qreal"></span><span id="Noise::setRate__qreal"></span><span class="target" id="classNoise_1aec3fe6fd3dadc8583fb93f586e665ac4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newRate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Noise7setRateE5qreal" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Noise6resultEPK13AgentInstance">
+<span id="_CPPv3N5Noise6resultEPK13AgentInstance"></span><span id="_CPPv2N5Noise6resultEPK13AgentInstance"></span><span id="Noise::result__AgentInstanceCP"></span><span class="target" id="classNoise_1a22810157bb0b22de8af8e51c8fa9fa63"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../agent/agentinstance.html#_CPPv413AgentInstance" title="AgentInstance"><span class="n"><span class="pre">AgentInstance</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">agentInstance</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Noise6resultEPK13AgentInstance" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes the result of the <a class="reference internal" href="#classNoise"><span class="std std-ref">Noise</span></a> function for a given Agent Instance. </p>
+<p>This function calculates the result of the <a class="reference internal" href="#classNoise"><span class="std std-ref">Noise</span></a> function for a given Agent Instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>agentInstance</strong> – A pointer to the Agent Instance for which the result is to be computed. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The computed result of the <a class="reference internal" href="#classNoise"><span class="std std-ref">Noise</span></a> function. Returns 0.0 if the agentInstance is null or if the agentInstance does not have a valid <a class="reference internal" href="index.html#classBrain"><span class="std std-ref">Brain</span></a>. Returns a previously computed result if it exists in the agentInstance’s <a class="reference internal" href="index.html#classBrain"><span class="std std-ref">Brain</span></a>. Otherwise, calculates and returns a new result based on the parameters of the <a class="reference internal" href="#classNoise"><span class="std std-ref">Noise</span></a> function. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5Noise6m_rateE">
+<span id="_CPPv3N5Noise6m_rateE"></span><span id="_CPPv2N5Noise6m_rateE"></span><span id="Noise::m_rate__qreal"></span><span class="target" id="classNoise_1ab78fb0d39ecb3efcff96cce81b937cdb"></span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_rate</span></span></span><a class="headerlink" href="#_CPPv4N5Noise6m_rateE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>the rate of this noise node </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Brainiac</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome to Brainiac’s documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Brainiac Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../agent/index.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../body/index.html">Body</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Brain</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Brainiac Manual</a><ul>
+  <li><a href="index.html">Brain</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Brain</a></li>
+      <li>Next: <a href="output.html" title="next chapter">Output Node</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dirk Fuchs.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/manual/brain/noise.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

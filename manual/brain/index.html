@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Brain &#8212; Brainiac  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Noise Node" href="noise.html" />
+    <link rel="prev" title="Body" href="../body/index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="brain">
+<h1>Brain<a class="headerlink" href="#brain" title="Link to this heading">¶</a></h1>
+<p>The agent’s brain is a fuzzy logic network that lets the agent sample all kind of information of its body and
+activate several  parameters if the body.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv45Brain">
+<span id="_CPPv35Brain"></span><span id="_CPPv25Brain"></span><span id="Brain"></span><span class="target" id="classBrain"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Brain</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv45Brain" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;brain.h&gt;</em></div>
+<p>This class represents the brain of an agent in the system. </p>
+<p>The <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a> class is a QObject that encapsulates the functionality of an agent’s brain in the system. It provides methods for managing fuzzy logic components, creating new IDs, and accessing the agent and brain editor associated with the brain. It also provides access to the agent’s fuzzy logic components through a QHash.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is part of the core functionality of the system and is used extensively throughout the codebase. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain5BrainEP7QObject">
+<span id="_CPPv3N5Brain5BrainEP7QObject"></span><span id="_CPPv2N5Brain5BrainEP7QObject"></span><span id="Brain::Brain__QObjectP"></span><span class="target" id="classBrain_1a5336b38706a78bc6bc6a0b69576f5180"></span><span class="sig-name descname"><span class="n"><span class="pre">Brain</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Brain5BrainEP7QObject" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Constructs a <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a> object with the given parent. </p>
+<p>The parent of a <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a> is the Agent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parent</strong> – The parent object of the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new instance of <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Brain7fuzziesEv">
+<span id="_CPPv3NK5Brain7fuzziesEv"></span><span id="_CPPv2NK5Brain7fuzziesEv"></span><span id="Brain::fuzziesC"></span><span class="target" id="classBrain_1a8b8e5ed5f52a7249542948e9d6cc5adb"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">FuzzyBase</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fuzzies</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Brain7fuzziesEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Brain5agentEv">
+<span id="_CPPv3NK5Brain5agentEv"></span><span id="_CPPv2NK5Brain5agentEv"></span><span id="Brain::agentC"></span><span class="target" id="classBrain_1a609c31d23590de97b84726a9cc38ce2d"></span><span class="n"><span class="pre">Agent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">agent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Brain5agentEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain10addAndNodeEN15BrainiacGlobals10BrainiacIdE">
+<span id="_CPPv3N5Brain10addAndNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="_CPPv2N5Brain10addAndNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="Brain::addAndNode__BrainiacGlobals::BrainiacId"></span><span class="target" id="classBrain_1acbf99f851f7b17212bf4a19a81ccf40e"></span><span class="n"><span class="pre">FuzzyAnd</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addAndNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Brain10addAndNodeEN15BrainiacGlobals10BrainiacIdE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Adds a new FuzzyAnd node to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+<p>This method creates a new FuzzyAnd object and inserts it into the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>’s QHash of fuzzies. If the provided id is 0, a new id will be generated using the <code class="docutils literal notranslate"><span class="pre">newId()</span></code> method. If the provided id already exists in the fuzzies QHash, a fatal error will be logged.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ownership of the FuzzyAnd object is transferred to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> – The BrainiacId of the FuzzyAnd. Default value is 0. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pointer to the newly created FuzzyAnd object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain9addOrNodeEN15BrainiacGlobals10BrainiacIdE">
+<span id="_CPPv3N5Brain9addOrNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="_CPPv2N5Brain9addOrNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="Brain::addOrNode__BrainiacGlobals::BrainiacId"></span><span class="target" id="classBrain_1a234c0cd8e15e1c35ea23bcd67a0e4a79"></span><span class="n"><span class="pre">FuzzyOr</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addOrNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Brain9addOrNodeEN15BrainiacGlobals10BrainiacIdE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Adds a new FuzzyOr node to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+<p>This method creates a new FuzzyOr object and inserts it into the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>’s QHash of fuzzies. If the provided id is 0, a new id will be generated using the <code class="docutils literal notranslate"><span class="pre">newId()</span></code> method. If the provided id already exists in the fuzzies QHash, a fatal error will be logged.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ownership of the FuzzyOr object is transferred to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> – The BrainiacId of the FuzzyOr. Default value is 0. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pointer to the newly created FuzzyOr object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain12addNoiseNodeEN15BrainiacGlobals10BrainiacIdE">
+<span id="_CPPv3N5Brain12addNoiseNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="_CPPv2N5Brain12addNoiseNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="Brain::addNoiseNode__BrainiacGlobals::BrainiacId"></span><span class="target" id="classBrain_1a41ccbb81a05bfc9f2d9cf34cee09b1ea"></span><a class="reference internal" href="noise.html#_CPPv45Noise" title="Noise"><span class="n"><span class="pre">Noise</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addNoiseNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Brain12addNoiseNodeEN15BrainiacGlobals10BrainiacIdE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Adds a new <a class="reference internal" href="noise.html#classNoise"><span class="std std-ref">Noise</span></a> node to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+<p>This method creates a new <a class="reference internal" href="noise.html#classNoise"><span class="std std-ref">Noise</span></a> object and inserts it into the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>’s QHash of fuzzies. If the provided id is 0, a new id will be generated using the <code class="docutils literal notranslate"><span class="pre">newId()</span></code> method. If the provided id already exists in the fuzzies QHash, a fatal error will be logged.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ownership of the <a class="reference internal" href="noise.html#classNoise"><span class="std std-ref">Noise</span></a> object is transferred to the <a class="reference internal" href="#classBrain"><span class="std std-ref">Brain</span></a>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> – The BrainiacId of the <a class="reference internal" href="noise.html#classNoise"><span class="std std-ref">Noise</span></a>. Default value is 0. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pointer to the newly created <a class="reference internal" href="noise.html#classNoise"><span class="std std-ref">Noise</span></a> object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain13addOutputNodeEN15BrainiacGlobals10BrainiacIdE">
+<span id="_CPPv3N5Brain13addOutputNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="_CPPv2N5Brain13addOutputNodeEN15BrainiacGlobals10BrainiacIdE"></span><span id="Brain::addOutputNode__BrainiacGlobals::BrainiacId"></span><span class="target" id="classBrain_1a607ec281e579962ea18fb2bf6ca4416e"></span><a class="reference internal" href="output.html#_CPPv411FuzzyOutput" title="FuzzyOutput"><span class="n"><span class="pre">FuzzyOutput</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addOutputNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Brain13addOutputNodeEN15BrainiacGlobals10BrainiacIdE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Brain5newIdEv">
+<span id="_CPPv3NK5Brain5newIdEv"></span><span id="_CPPv2NK5Brain5newIdEv"></span><span id="Brain::newIdC"></span><span class="target" id="classBrain_1a9a1d2a0b24aaa2aa6865b7eb4bd16c59"></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">newId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Brain5newIdEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Brain11brainEditorEv">
+<span id="_CPPv3NK5Brain11brainEditorEv"></span><span id="_CPPv2NK5Brain11brainEditorEv"></span><span id="Brain::brainEditorC"></span><span class="target" id="classBrain_1aa8e9605b9913ee77db54bb8bf4471888"></span><span class="n"><span class="pre">BrainEditor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">brainEditor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Brain11brainEditorEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain7m_agentE">
+<span id="_CPPv3N5Brain7m_agentE"></span><span id="_CPPv2N5Brain7m_agentE"></span><span id="Brain::m_agent__AgentP"></span><span class="target" id="classBrain_1a16fc4d126d8bef9a38fcdf41ebc48eae"></span><span class="n"><span class="pre">Agent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_agent</span></span></span><a class="headerlink" href="#_CPPv4N5Brain7m_agentE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain9m_fuzziesE">
+<span id="_CPPv3N5Brain9m_fuzziesE"></span><span id="_CPPv2N5Brain9m_fuzziesE"></span><span id="Brain::m_fuzzies__QHash:BrainiacGlobals::BrainiacId.FuzzyBaseP:"></span><span class="target" id="classBrain_1ace83a833d2a10c768cae751084a9e0fa"></span><span class="n"><span class="pre">QHash</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BrainiacGlobals</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BrainiacId</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">FuzzyBase</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_fuzzies</span></span></span><a class="headerlink" href="#_CPPv4N5Brain9m_fuzziesE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5Brain13m_brainEditorE">
+<span id="_CPPv3N5Brain13m_brainEditorE"></span><span id="_CPPv2N5Brain13m_brainEditorE"></span><span id="Brain::m_brainEditor__BrainEditorP"></span><span class="target" id="classBrain_1aff2f0aeed3cd9190b2eced7ae3a66938"></span><span class="n"><span class="pre">BrainEditor</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_brainEditor</span></span></span><a class="headerlink" href="#_CPPv4N5Brain13m_brainEditorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="noise.html">Noise Node</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="noise.html#_CPPv45Noise"><code class="docutils literal notranslate"><span class="pre">Noise</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Output Node</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="output.html#_CPPv411FuzzyOutput"><code class="docutils literal notranslate"><span class="pre">FuzzyOutput</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Brainiac</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome to Brainiac’s documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Brainiac Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../agent/index.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../body/index.html">Body</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Brain</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Brainiac Manual</a><ul>
+      <li>Previous: <a href="../body/index.html" title="previous chapter">Body</a></li>
+      <li>Next: <a href="noise.html" title="next chapter">Noise Node</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dirk Fuchs.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/manual/brain/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
